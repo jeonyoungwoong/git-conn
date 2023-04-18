@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var name = "홍길동";
+      document.write("이름:" + name + "<br/>");
+      var height = 175.5;
+      document.write("키:" + height + "<br/>");
+      var address = "서울 대학로";
+      document.write("주소:" + address + "<br/>");
+    </script>
+
+    <h4>대입 연산자</h4>
+    <script>
+      var a = (b = c = d = e = 14);
+      a += 5;
+      b -= 5;
+      c *= 5;
+      d /= 5;
+      e %= 5;
+      document.write("<p> a=b=c=d=e=14></p>");
+      document.write("a+=5; =>" + a + "<br/>");
+      document.write("b-=5; =>" + b + "<br/>");
+      document.write("c*=5; =>" + c + "<br/>");
+      document.write("d/=5; =>" + d + "<br/>");
+      document.write("e%=5; =>" + e + "<br/>");
+    </script>
+
+    <h4>증감 연산자</h4>
+
+    <p>++변수, 변수++ => 변수 = 변수 +1</p>
+    <p>--변수, 변수-- => 변수 = 변수 -1</p>
+    <script>
+      var a = (b = 9);
+
+      document.write("a=b=9 <br/><br/>");
+      document.write(
+        "연산 전 a= " + a + ", ++a출력: " + ++a + ", 연산 후 a = " + a + "<br/>"
+      );
+      document.write(
+        "연산 전 a= " + a + ", ++a출력: " + ++a + ", 연산 후 a = " + a + "<br/>"
+      );
+      document.write(
+        "연산 전 a= " + a + ", ++a출력: " + ++a + ", 연산 후 a = " + a + "<br/>"
+      );
+      document.write(
+        "연산 전 a= " + a + ", ++a출력: " + ++a + ", 연산 후 a = " + a + "<br/>"
+      );
+    </script>
+
+    <h4>비교 연산자</h4>
+    <script>
+      var a = (b = 9);
+      var a = 11;
+      b = 5;
+
+      document.write("a= " + a + "b=" + b + "<br/>");
+      document.write("a == b" + (a == b) + "<br/>");
+      document.write("a != b" + (a == b) + "<br/>");
+      document.write("a > b" + (a == b) + "<br/>");
+      document.write("a < b" + (a == b) + "<br/>");
+      document.write("a >= b" + (a == b) + "<br/>");
+      document.write("a <= b" + (a == b) + "<br/>");
+    </script>
+
+    <h5>switch문</h5>
+
+    <script>
+      //today = prompt("요일을 입력하세요, 월/화/수/목/금/토/일","")
+      switch (today) {
+        case "월":
+          document.write("오늘은 월요일입니다.");
+          break;
+        case "화":
+          document.write("오늘은 화요일입니다.");
+          break;
+        case "수":
+          document.write("오늘은 수요일입니다.");
+          break;
+        case "목":
+          document.write("오늘은 목요일입니다.");
+          break;
+        case "금":
+          document.write("오늘은 금요일입니다.");
+          break;
+        case "토":
+          document.write("오늘은 토요일입니다.");
+          break;
+        case "일":
+          document.write("주말은 가족과 함께 즐겁게 보내자.");
+          break;
+        default:
+          document.write("요일이 잘못 입력되었습니다.");
+      }
+    </script>
+
+    <h5>반복문</h5>
+    <script>
+      var i, j, msg;
+      //msg = prompt("원하는 텍스트를 입력하세요", "Hello!");
+      for (i = 6; i >= 1; i--) {
+        document.write(
+          "<h" + i + ">" + " &lt;h" + i + "&gt; 헤딩:" + msg + "</h" + i + ">"
+        );
+      }
+    </script>
+    <h5>while문, do while문</h5>
+    <script>
+      document.write("<h4>* while문으로 2단 출력 *</h4>");
+      var num = 1;
+      do {
+        document.write("2 *" + num + "=" + 2 * num + "<br/>");
+        num++;
+      } while (num <= 9);
+    </script>
+
+    <h5>함수</h5>
+    <script>
+      var n_sum = function(){
+        var n = prompt("1~100 사이의 정수를 입력하세요", "10"); s = sum(n);
+        document.write("1부터" +n+"까지의 합은 "+s+"이다");
+
+      }
+      function sum ( num) {
+        var res = 0;
+        document.write("<br>1부터 "+num+"까지의 정수의 합을 계산합니다.</br><br/>");
+        for (i=1; i<=num; i++){
+          res +=i;
+        }
+        return res;
+      }
+       n_sum();
+    </script>
+
+
+
+
+
+
+
+  </body>
+</html>
